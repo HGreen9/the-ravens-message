@@ -68,3 +68,10 @@ h1, h2 {
     border: 2px solid #d4af7f;
     border-radius: 8px;
 }
+
+.Raven-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 20%;
+  height: auto;
+}
