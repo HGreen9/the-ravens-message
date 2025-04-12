@@ -1,4 +1,4 @@
-import videojs from 'video.js';
+import videojs from './node_modules/video.js/dist/video.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
