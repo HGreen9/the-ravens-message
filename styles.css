@@ -7,20 +7,21 @@ body {
 
 #video-player-container {
     margin: auto;
-    border: #000000 solid 1px; /* Black border */
-    border-radius: 4%;
+    border-radius: 20px;
     overflow: hidden;
     display: flex; /* Center content */
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     height: auto; /* Let the container adapt to the video height */
     width: auto; /* Let the container adapt to the video width */
-    max-height: calc(100vh - 2in); /* Prevent the container from exceeding body margins */
-    max-width: calc(100vw - 2in); /* Prevent the container from exceeding body margins */
+    max-height: 70vh; /* Reduced to ensure the container fits within the viewport */
+    max-width: 70vw; /* Reduced to ensure the container fits within the viewport */
 }
 
 #video-player-container video {
-    max-width: 80%; /* Scale video to 80% of the container width */
-    max-height: 80%; /* Scale video to 80% of the container height */
+    border-radius: 10px; /* Add rounded corners to the video */
+    display: block; /* Ensure the video takes up the full container */
+    max-width: 100%; /* Prevent the video from exceeding the container width */
+    max-height: 100%; /* Prevent the video from exceeding the container height */
     object-fit: contain; /* Maintain aspect ratio */
 }
