@@ -12,6 +12,7 @@
 
   <!-- Retro Font from Google Fonts (e.g., Press Start 2P for a pixelated feel) -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -21,7 +22,8 @@
       class="video-js vjs-default-skin"
       controls
       preload="auto"
-      data-setup='{}'>
+      data-setup='{}'
+      aria-label="The Raven's Message video">
       <source src="/Assets/The Raven's Message.mp4" type="video/mp4" />
       <!-- Fallback text -->
       Your browser does not support HTML5 video.
@@ -30,15 +32,9 @@
 
   <!-- Video.js JavaScript -->
   <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
-  <!-- Optional: Additional player configuration JavaScript -->
-  <script>
-    // Example of a custom configuration (if needed)
-    var player = videojs('my-video', {
-      // Add any Video.js player options here if necessary
-      controlBar: {
-        volumePanel: {inline: false}
-      }
-    });
-  </script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+
 </body>
 </html>
