@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Raven's Message</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Raven's Message</title>
+  <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <!-- Fallback -->
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="description" content="The Raven's Message - A mysterious surveillance file.">
+  <meta property="og:title" content="The Raven's Message">
+  <meta property="og:description" content="A mysterious surveillance file.">
+  <meta property="og:image" content="path/to/preview-image.jpg">
+  <meta property="og:type" content="video.other">
 </head>
-<body>
-    <div id="video-player-container">
-        <video
-            id="video-player-container"
-            class="video-js"
-            controls
-            preload="auto"
-            data-setup="{}"
-        >
-            <source src="Assets/The Ravens Message.mp4" type="video/mp4" />
-            <!-- Add fallback text for unsupported browsers -->
-            Your browser does not support the video tag.
-        </video>
-    </div>
 
-    <script src="script.js"></script> <!-- Link to your JS file -->
+<body>
+
+<div class="container">
+  <h1>[TOP SECRET]</h1>
+  <h2>Masquerade Protocol – Surveillance File #7</h2>
+  
+  <div class="transmission">
+    <p><strong>ACCESSING TRANSMISSION…</strong></p>
+    <p>DECRYPTION IN PROGRESS ▓▓▓░░░░░░</p>
+    <p><strong>VIDEO LOG:</strong> "The Raven's Intercept"</p>
+    <p><strong>📁 Found:</strong> Ballroom wiretap, 23:43 PM</p>
+    <p><strong>📍 Location:</strong> Palais de Minuit – West Wing</p>
+    <p><strong>Transcript Preview (blurred):</strong></p>
+    <p><em>> At midnight… in the west wing… the f…</em></p>
+  </div>
+
+  <div id="video-player-container">
+    <video
+      id="raven-message"
+      class="video-js"
+      controls
+      preload="auto"
+      data-setup="{}"
+      title="The Raven's Message video"
+    >
+      <source src="/Assets/The Ravens Message.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="note">
+    🕯️ NOTE: Stay alert.
+  </div>
+</div>
+
+<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+<script src="script.js"></script>
+<script src="dist/bundle.js"></script>
 </body>
 </html>

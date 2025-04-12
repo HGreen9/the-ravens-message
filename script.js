@@ -1,28 +1,34 @@
-import videojs from 'video.js'; // Correct import for the video.js library
+import videojs from 'video.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
-    // Add a flickering effect
+    // 🎞️ Add a subtle flickering effect (like dim lighting)
     setInterval(() => {
-        body.style.filter = `brightness(${Math.random() * 0.2 + 0.9})`;
-    }, 100);
+        const brightness = (Math.random() * 0.1 + 0.95).toFixed(2);
+        body.style.filter = `brightness(${brightness})`;
+    }, 200); // slowed slightly to feel more intentional
 
-    // Add a "PLAY" overlay
+    // 🕵️‍♀️ Create and style a "PLAY MESSAGE" overlay
     const playOverlay = document.createElement('div');
-    playOverlay.textContent = 'PLAY';
+    playOverlay.textContent = '▶ DECRYPTED AUDIO AVAILABLE';
     playOverlay.style.position = 'absolute';
-    playOverlay.style.top = '10px';
-    playOverlay.style.left = '10px';
+    playOverlay.style.top = '20px';
+    playOverlay.style.left = '20px';
+    playOverlay.style.padding = '8px 14px';
+    playOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+    playOverlay.style.border = '1px solid #00FF00';
     playOverlay.style.color = '#00FF00';
-    playOverlay.style.fontFamily = 'Press Start 2P, monospace';
-    playOverlay.style.fontSize = '20px';
-    playOverlay.style.textShadow = '0 0 5px #00FF00, 0 0 10px #00FF00';
+    playOverlay.style.fontFamily = 'Courier New, monospace';
+    playOverlay.style.fontSize = '14px';
+    playOverlay.style.textShadow = '0 0 4px #00FF00, 0 0 6px #00FF00';
     playOverlay.style.zIndex = '3';
+    playOverlay.style.pointerEvents = 'none'; // keeps it from blocking clicks
+
     document.body.appendChild(playOverlay);
 
-    // Initialize the video player
-    const videoPlayer = videojs('video-player-container', {
+    // 🎬 Initialize the video player
+    const videoPlayer = videojs('raven-message', {
         controls: true,
         autoplay: false,
         preload: 'auto',
@@ -30,14 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
         height: 360,
         sources: [
             {
-                src: 'Assets/The Ravens Message.mp4', // Replace with the path to your video file
-                type: 'video/mp4' // Replace with the correct MIME type for your video
+                src: 'Assets/The Ravens Message.mp4',
+                type: 'video/mp4'
             }
         ]
     });
 
-    // Optional: Add event listeners or customize further
+    // 🧠 Optional: Log playback for immersion
     videoPlayer.on('play', () => {
-        console.log('Video is playing');
+        console.log('[ACCESS GRANTED] Playing surveillance footage...');
     });
 });
+
+// filepath: /workspaces/the-ravens-message/webpack.config.js
+const path = require('path');
+
+module.exports = {
+    entry: './script.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
+    mode: 'development',
+};
