@@ -1,7 +1,26 @@
+body {
+    margin: 1in;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden; /* Prevent scrolling */
+}
+
 #video-player-container {
-    max-width: 640px;
-    margin: 0 auto;
-    border: 2px solid #000;
-    border-radius: 8px;
+    margin: auto;
+    border: #000000 solid 1px; /* Black border */
+    border-radius: 4%;
     overflow: hidden;
+    display: flex; /* Center content */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: auto; /* Let the container adapt to the video height */
+    width: auto; /* Let the container adapt to the video width */
+    max-height: calc(100vh - 2in); /* Prevent the container from exceeding body margins */
+    max-width: calc(100vw - 2in); /* Prevent the container from exceeding body margins */
+}
+
+#video-player-container video {
+    max-width: 80%; /* Scale video to 80% of the container width */
+    max-height: 80%; /* Scale video to 80% of the container height */
+    object-fit: contain; /* Maintain aspect ratio */
 }

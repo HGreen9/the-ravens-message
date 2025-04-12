@@ -8,7 +8,19 @@
     <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
 </head>
 <body>
-    <div id="video-player-container" class="video-js"></div> <!-- Video player container -->
+    <div id="video-player-container">
+        <video
+            id="video-player-container"
+            class="video-js"
+            controls
+            preload="auto"
+            data-setup="{}"
+        >
+            <source src="Assets/The Ravens Message.mp4" type="video/mp4" />
+            <!-- Add fallback text for unsupported browsers -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <script src="script.js"></script> <!-- Link to your JS file -->
 </body>
