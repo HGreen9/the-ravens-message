@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+    background-color: #222; /* Dark background reminiscent of classic arcade cabinets */
+    color: #e0e0e0;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px solid #ff005c; /* Bright, neon-like border */
+    box-shadow: 0 0 20px #ff005c; /* Glowing effect */
+    background-color: #000; /* Black backdrop for the player */
+  }
+  
+  /* Customize the video player's control bar for a retro feel */
+  .vjs-control-bar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border-top: 2px solid #ff005c;
+  }
+  
+  /* Style buttons and icons */
+  .vjs-big-play-button, 
+  .vjs-play-control, 
+  .vjs-volume-control,
+  .vjs-progress-control {
+    border-radius: 0; /* Sharp edges for a classic look */
+    background-color: #333;
+    color: #ff005c;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Change the play button hover */
+  .vjs-big-play-button:hover,
+  .vjs-play-control:hover,
+  .vjs-volume-control:hover,
+  .vjs-progress-control:hover {
+    background-color: #ff005c;
+    color: #000;
+  }
+  
+  /* Customize progress bar appearance */
+  .vjs-progress-holder {
+    background-color: #444;
+  }
+  
+  .vjs-play-progress {
+    background-color: #ff005c;
+  }
+  
+  /* Customize the volume level slider */
+  .vjs-volume-level {
+    background-color: #ff005c;
+  }
+  
+  /* Optionally style time displays and other text elements */
+  .vjs-current-time,
+  .vjs-duration {
+    font-size: 10px;
+    color: #e0e0e0;
+  }
+  
