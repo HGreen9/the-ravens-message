@@ -7,10 +7,10 @@
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   
-    <!-- Favicons -->
-    <link rel="icon" href="/Assets/favicons/favicon.ico" sizes="32x32">
-    <link rel="icon" href="/Assets/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/Assets/favicons/apple-touch-icon.png">
+  <!-- Favicons -->
+  <link rel="icon" href="/Assets/favicons/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/Assets/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/Assets/favicons/apple-touch-icon.png">
 
   <meta name="description" content="The Raven's Message - A mysterious surveillance file.">
   <meta property="og:title" content="The Raven's Message">
@@ -21,42 +21,57 @@
 
 <body>
 
-<div class="container">
-  <img src="/Assets/Raven's Mask.png" alt="The Raven's Mask" class="Raven-logo" />
-  <h1>[TOP SECRET]</h1>
-  <h2>Masquerade Protocol – Surveillance File #7</h2>
-  
-  <div class="transmission">
-    <p><strong>ACCESSING TRANSMISSION…</strong></p>
-    <p>DECRYPTION IN PROGRESS ▓▓▓░░░░░░</p>
-    <p><strong>VIDEO LOG:</strong> "The Raven's Intercept"</p>
-    <p><strong>📁 Found:</strong> Ballroom wiretap, 23:43 PM</p>
-    <p><strong>📍 Location:</strong> Palais de Minuit – West Wing</p>
-    <p><strong>Transcript Preview (blurred):</strong></p>
-    <p><em> Listen closley... take note... This message will not repeat...</em></p>
+  <!-- Password prompt -->
+  <script>
+    (function(){
+      const password = "MIDNIGHT";
+      const attempt = prompt("🔒 Enter password to access this site:");
+      if (attempt !== password) {
+        alert("🚫 Incorrect password. Access denied.");
+        // wipe the page
+        document.body.innerHTML = "";
+        // or redirect away instead:
+        // window.location.href = "https://example.com";
+      }
+      // if correct, the rest of the page loads as normal
+    })();
+  </script>
+
+  <div class="container">
+    <img src="/Assets/Raven's Mask.png" alt="The Raven's Mask" class="Raven-logo" />
+    <h1>[TOP SECRET]</h1>
+    <h2>Masquerade Protocol – Surveillance File #7</h2>
+    
+    <div class="transmission">
+      <p><strong>ACCESSING TRANSMISSION…</strong></p>
+      <p>DECRYPTION IN PROGRESS ▓▓▓░░░░░░</p>
+      <p><strong>VIDEO LOG:</strong> "The Raven's Intercept"</p>
+      <p><strong>📁 Found:</strong> Ballroom wiretap, 23:43 PM</p>
+      <p><strong>📍 Location:</strong> Palais de Minuit – West Wing</p>
+      <p><strong>Transcript Preview (blurred):</strong></p>
+      <p><em> Listen closley... take note... This message will not repeat...</em></p>
+    </div>
+
+    <div id="video-player-container">
+      <video
+        id="raven-message"
+        class="video-js"
+        controls
+        preload="auto"
+        data-setup="{}"
+        title="The Raven's Message video"
+      >
+        <source src="/Assets/the raven's message 2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="note">
+      🕯️ NOTE: Stay alert.
+    </div>
   </div>
 
-  <div id="video-player-container">
-    <video
-      id="raven-message"
-      class="video-js"
-      controls
-      preload="auto"
-      data-setup="{}"
-      title="The Raven's Message video"
-    >
-      <source src="/Assets/the raven's message 2.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="note">
-    🕯️ NOTE: Stay alert.
-  </div>
-</div>
-
-<script src="dist/bundle.js"></script>
-<script src="script.js"></script>
-<script src="/dist/bundle.js"></script>
+  <script src="dist/bundle.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
